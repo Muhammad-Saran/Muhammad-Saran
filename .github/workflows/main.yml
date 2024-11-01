@@ -1,26 +1,30 @@
+permissions:
+  contents: write
+
 name: generate animation
 
 on:
-  # run automatically every 24 hours
   schedule:
-    - cron: "0 */12 * * *" 
-  
-  # allows to manually run the job at any time
-  workflow_dispatch:
-  
-  # run on every push on the main branch
+    - cron: "0 */12 * * *" # Run automatically every 12 hours
+  workflow_dispatch: # Allows manual runs
   push:
     branches:
-    - main
+      - main
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    
+
     steps:
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
-      - name: generate github-contribution-grid-snake.svg
+      # Step to configure Git
+      - name: Configure Git
+        run: |
+          git config --global user.name "Muhammad-Saran"
+          git config --global user.email "post2msaran@gmail.com"
+
+      # Step to generate the snake game from GitHub user contributions graph
+      - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -29,14 +33,16 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-          
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push github-contribution-grid-snake.svg to the output branch
+
+      # Step to check if the files were generated
+      - name: Check generated files
+        run: ls -la dist # List the contents of the dist directory to confirm file creation
+
+      # Step to push the generated SVG files to the output branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Or use ${ secrets.MY_PAT }
