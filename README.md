@@ -1,7 +1,15 @@
 ## Hi, I am Muhammad Saran! 
 </br>
-👋 Hello, World!
-I'm Muhammad Saran, a Professional AI Developer and Machine Learning Engineer, with a passion for turning complex data into actionable intelligence. I specialize in crafting intelligent, data-driven solutions that leverage the latest advancements in machine learning and AI to address challenging real-world problems. My work focuses on analyzing, transforming, and modeling data to develop solutions that are not only accurate but also highly scalable and efficient. Whether through classification, regression, clustering, or recommendation models, I strive to deliver results that meet specific business needs and exceed expectations..
+I am an AI Developer with a deep interest in machine learning and deep learning. My goal is to build intelligent systems that solve real-world problems and push the boundaries of what's possible with AI.
+
+What I Do
+I specialize in:
+
+Machine Learning (ML): Building predictive models, tuning algorithms, and extracting insights from data.
+Deep Learning (DL): Working with neural networks for tasks in image recognition, natural language processing, and more.
+Data Processing: Preprocessing and engineering data to enhance model accuracy and performance.
+AI Research & Development: Continuously exploring the latest research to incorporate cutting-edge techniques into my work.
+I'm passionate about developing AI-driven solutions that have a tangible impact. Feel free to check out my projects, and let’s connect if you’re interested in collaboration!
  
   <img src="https://raw.githubusercontent.com/Muhammad-saran/Muhammad-saran/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 
