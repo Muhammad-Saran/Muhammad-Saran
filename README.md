@@ -1,4 +1,4 @@
-<h1 align="center">Hi there, I'm Muhammad Saran! 👋</h1>
+<h1 align="center">Hi there, I'm Muhammad Saran!</h1>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Muhammad-saran&label=PROFILE%20VIEWS&color=0e75b6&style=flat" alt="Muhammad-saran" />
